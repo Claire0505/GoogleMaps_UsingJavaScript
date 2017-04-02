@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
             Location location = locationManager.getLastKnownLocation(s);
             locationManager.requestLocationUpdates(s,0,0,locationlistener);
-
+            //抓取定位資訊
             String centerURL = "javascript:centerAt(" + location.getLatitude()+
                     "," + location.getLongitude() + ")";
             mWebView.loadUrl(centerURL);
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         mImgBtnMaps.setOnClickListener(listener);
 
         mWebView = (WebView)findViewById(R.id.webView);
-        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setJavaScriptEnabled(true); //啟用JavaScript
         mWebView.loadUrl("file:///android_asset/Map.html");
 
 
