@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GoogleMaps_UsingJavaScript</string>
+    <string name="location">定位</string>
+</resources>
